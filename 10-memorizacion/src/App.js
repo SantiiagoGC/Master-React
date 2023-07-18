@@ -9,11 +9,13 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         
-        {/* Ejercicio hook useMemo */}
-        <Tareas />
+        {/* Ejercicio hook useMemo funciones */}
+        {/* <Tareas />*/}
 
         {/* Ejercicio metodo memo componentes */}
         {/*<Gestion / >*/}
+
+        <Gestion />
       </header>
     </div>
   );

@@ -1,11 +1,13 @@
+import logo from './logo.svg';
 import './App.css';
-import { EjemploComponente } from './components/EjemploComponente';
+import { MisJuegos } from './components/MisJuegos';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <EjemploComponente></EjemploComponente>
+        <img src={logo} className="App-logo" alt="logo" />
+        <MisJuegos />
       </header>
     </div>
   );
