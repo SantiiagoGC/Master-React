@@ -39,6 +39,23 @@ export const MisJuegos = () => {
     dispatch(accion);
   }
 
+  const editar = (e, id) => {
+    console.log(e.target.value,"editar", id);
+
+    let juego = {
+      id,
+      titulo: e.target.value,
+      descripcion: e.target.value
+    };
+
+    const accion = {
+      type: "editar",
+      payload: juego
+    };
+
+    dispatch(accion);
+  }
+
   return (
     <div>
         <h1>Estos son mis videojuegos</h1>
@@ -50,6 +67,13 @@ export const MisJuegos = () => {
             <li key={juego.id}>
               {juego.titulo}
               &nbsp; <button onClick={ () => borrarJuego(juego.id)}>X</button>
+              <input type = "text" onBlur={ e => editar(e, juego.id) }
+                                   onKeyPress={e => {
+                                    if (e.key === "Enter")
+                                    editar(e, juego.id) 
+                                    console.log("Has presionado enter.")
+                                  }}
+              />
             </li>
           ))
         }
