@@ -1,0 +1,50 @@
+/*
+    const [formulario, setFormulario] = useState({});
+
+    //const id1 = useId();
+    //const id2 = useId();
+    //const id3 = useId();
+    //const id4 = useId();
+    //const id5 = useId();
+
+
+    const serializarFormulario = (formulario) => {
+
+        const formData = new FormData(formulario);
+
+        const objetoCompleto = {};
+
+        formData.forEach((value, key) => {
+            objetoCompleto[key] = value;
+        });
+
+        return objetoCompleto;
+        
+    }*/
+
+    /*
+    const enviarFormulario = (e) => {
+        e.preventDefault();
+
+        /*
+        let curso = {
+            titulo: e.target.titulo.value,
+            anio: e.target.anio.value,
+            descripcion: e.target.descripcion.value,
+            autor: e.target.autor.value,
+            email: e.target.email.value
+        };*/
+
+        let curso = serializarFormulario(e.target);
+
+        setFormulario(curso);
+    }
+
+    const cambiado = ({target}) => {
+        const {name, value} = target;
+
+        setFormulario({
+            ...formulario,
+            [name]: value
+        })
+    }
